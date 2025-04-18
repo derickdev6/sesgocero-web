@@ -74,21 +74,21 @@ export default function ClusterDetail() {
   }
 
   return (
-    <div className="min-h-screen pt-16 px-4">
-      <section className="mb-8">
-        <h1 className="text-4xl font-bold text-gray-800 text-center mt-14">{clusterName}</h1>
+    <div className="flex flex-col items-center min-h-screen pt-16 px-4">
+      <section className="mb-8 w-5/6">
+        <h1 className="text-4xl font-bold text-gray-800 text-center my-8">{clusterName}</h1>
         <p className="text-sm text-gray-400 text-center mb-4">
           Actualizado: {new Date(cluster.updated_at).toLocaleDateString()}
         </p>
         <p className="text-lg text-gray-500 text-center">{cluster.description}</p>
       </section>
 
-      <section className='w-5/6 mx-auto'>
+      <section className="w-5/6">
         <h2 className="text-lg font-semibold text-gray-800 mb-4">
           {cluster.articles.count} Artículos
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {articles.map((article) => (
             <ArticleCard key={article.url} article={article} />
           ))}

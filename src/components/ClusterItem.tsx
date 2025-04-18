@@ -50,12 +50,12 @@ export default function ClusterItem({ clusterId, name, count, articleList }: Clu
 
   return (
     <div 
-      className="min-w-lg flex flex-row items-center bg-white border border-gray-100 rounded-2xl overflow-hidden cursor-pointer hover:border-gray-300 transition-border duration-200 p-2 mb-6"
+      className="flex flex-row items-center bg-white border border-gray-100 rounded-2xl overflow-hidden cursor-pointer hover:border-gray-300 transition-border duration-200 p-2"
       onClick={handleClick}
     >
       <div className="p-4 flex-9">
         <h2 className="text-2xl font-bold text-gray-800">{name}</h2>
-        <p className="text-xs text-gray-400">{count} artículos</p>
+        <p className="text-xs text-gray-600">{count} artículos</p>
       </div>
       <div className="p-4 flex-1">
         <div className="flex flex-row items-stretch bg-gray-100 rounded-full w-16 h-16 overflow-hidden">
